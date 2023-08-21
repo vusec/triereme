@@ -1,0 +1,44 @@
+# This file is part of SymCC.
+#
+# SymCC is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later
+# version.
+#
+# SymCC is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+# A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along with
+# SymCC. If not, see <https://www.gnu.org/licenses/>.
+
+[package]
+name = "fuzzing_helper"
+version = "0.1.0"
+authors = ["Julius Hohnerlein", "Sebastian Poeplau <sebastian.poeplau@eurecom.fr>"]
+edition = "2018"
+license = "GPL-3.0-or-later"
+
+[dependencies]
+structopt = "0.3"
+tempfile = "3.1"
+anyhow = "1.0"
+log = "0.4.0"
+env_logger = "0.9"
+regex = "1"
+libafl = { version = "0.6", default-features = false, features=["std"]}
+runtime = {path = "../runtime"}
+tracing-subscriber = "0.2"
+tracing-appender = "0.1"
+flate2 = "1.0"
+tracing = { version = "0.1", default-features = false, features=["std"]}
+jemallocator = "0.3.2"
+jemalloc-ctl = "0.3.3"
+z3-sys = { git = "https://github.com/prove-rs/z3.rs.git" }
+csv = "1.1.6"
+serde = { version = "1.0", features = ["derive"] }
+ctrlc = "3.2.4"
+once_cell = "1.16.0"
+
+# Avoid issue with wrong bitflags version
+rustix = "0.37.15"

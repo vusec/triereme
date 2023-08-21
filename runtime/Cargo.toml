@@ -1,0 +1,29 @@
+[package]
+name = "runtime"
+version = "0.1.0"
+authors = ["Julius Hohnerlein <julihoh@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libloading = "0.7"
+z3 = { git = "https://github.com/prove-rs/z3.rs.git" }
+hashbrown = "0.11"
+rustc-hash = "1.1"
+ahash = "0.7.4"
+itertools = "0.10.1"
+tracing = { version = "0.1", default-features = false, features=["std"] }
+symcc_runtime = "0.8.2"
+libafl = { version = "0.6", default-features = false, features=["std"] }
+apint = "0.2.0"
+hdrhistogram = "7.5.2"
+
+[dev-dependencies]
+quickcheck = "1.0.3"
+quickcheck_macros = "1.0.0"
+criterion = "0.3"
+
+[build-dependencies]
+bindgen = "*"
+symcc_libafl = "*"

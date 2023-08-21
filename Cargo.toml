@@ -1,0 +1,11 @@
+[workspace]
+members = [
+    "runtime",
+    "fuzzing_helper",
+]
+exclude = [
+    "libafl_tracer",
+]
+
+[profile.release]
+debug = true
