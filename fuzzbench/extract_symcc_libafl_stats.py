@@ -42,7 +42,7 @@ def read_truncated_gzip(path: Path):
     return result.stdout
 
 
-QSYM_STATS_ARCHIVE_PATH = "corpus/symcc/trace.csv.gz"
+QSYM_STATS_ARCHIVE_PATH = "symcc/trace.csv.gz"
 
 
 def extract_qsym_stats(visitor: RemoteVisitor, trial_dir: Path, tmp_dir: Path):

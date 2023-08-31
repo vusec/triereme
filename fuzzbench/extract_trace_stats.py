@@ -315,7 +315,7 @@ def is_file_in_archive(archive_path: Path, file_path: str):
     return tar_list.returncode == 0
 
 
-TRACE_ARCHIVE_PATH = "corpus/mine/trace.json.gz"
+TRACE_ARCHIVE_PATH = "mine/trace.json.gz"
 
 
 def extract_stats(visitor: RemoteVisitor, trial_dir: Path, tmp_dir: Path):
