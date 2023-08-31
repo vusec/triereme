@@ -455,7 +455,7 @@ def process_experiment(
 
     print(f"benchmarks: {benchmarks}")
     print(f"fuzzers: {fuzzers}")
-    fuzzers &= {"symcc_linear_single", "symcc_trie_single"}
+    fuzzers &= {"triereme_linear_single", "triereme_trie_single"}
 
     file_stats = pd.DataFrame()
     cond_stats = pd.DataFrame()
